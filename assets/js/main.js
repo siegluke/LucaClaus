@@ -30,6 +30,27 @@ function linkAction() {
 
 navLink.forEach(n => n.addEventListener("click", linkAction));
 
+/*===================== SEE MORE ABOUT ME ====================*/
+document.addEventListener("DOMContentLoaded", function() {
+    const description = document.querySelector(".moreAboutMe");
+    const button = document.querySelector(".see-more-button");
+
+    const maxHeight = "50px"; // Altezza massima del paragrafo prima dell'espansione
+    let expanded = false;
+
+
+    button.addEventListener("click", function() {
+        if (!expanded) {
+            description.style.display = "block"; // Espandi il paragrafo
+            button.textContent = "See less";
+        } else {
+            description.style.display="none" // Contrai il paragrafo
+            button.textContent = "See more";
+        }
+        expanded = !expanded;
+    });
+});
+
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName("skills__content");

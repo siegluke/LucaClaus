@@ -526,7 +526,7 @@ img {
 }
 
 .skills__python {
-	width: 90%;
+	width: 10%;
 }
 
 .skills__django_flask {
@@ -905,7 +905,10 @@ img {
 
 /*==================== CONTACT ME ====================*/
 .contact__container {
-	row-gap: 3rem;
+	/*row-gap: 3rem;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .contact__information {
