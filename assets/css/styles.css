@@ -614,6 +614,9 @@ img {
 	font-size: var(--h3-font-size);
 	font-weight: var(--font-medium);
 	cursor: pointer;
+	border: 2px solid black; /* Bordo nero */
+    padding: 0.5rem; /* Aggiunge padding per evitare che il contenuto tocchi il bordo */
+    border-radius: 5px;
 }
 
 .qualification__button:hover {
@@ -672,7 +675,11 @@ img {
 }
 
 .qualification__button.qualification__active {
-	color: var(--first-color);
+	color: white;
+	background-color: var(--first-color); /* Colore di sfondo attivo */
+    padding: 0.5rem 1rem; /* Aggiungi padding se necessario */
+    border-radius: 5px; /* Arrotondamento degli angoli per un effetto più morbido */
+    transition: background-color 0.3s ease;
 }
 
 /*==================== SERVICES ====================*/
@@ -1371,3 +1378,4 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
+
