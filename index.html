@@ -16,6 +16,15 @@
 	<title>Luca Claus — Computer Science Engineer</title>
 
 	<link rel="shortcut icon" href="assets/icon/terminal-icon.png" type="image/x-icon">
+	<!-- CSS di Slick -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+	<!-- JavaScript di Slick -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
 </head>
 <body>
 	<!--==================== HEADER ====================-->
@@ -125,24 +134,16 @@
 			<span class="section__subtitle">My introduction</span>
 			<div class="about__container container grid">
 				<div class="about__img">
-					<!-- <img src="assets/img/about.png" alt="" class="about__img"> 
-					<svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<mask id="mask0" mask-type="alpha">
-							<path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-							130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-							97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-							0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-						</mask>
-						<g mask="url(#mask0)">
-							<path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-							165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-							129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-							-0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-							<image class="home__blob-img" x='20' y='20' xlink:href="assets/img/imgSci2.jpeg"/>
-						</g>
-					</svg>-->
-					<img src="assets/img/imgSci2.jpeg">
-				</div>
+					<!-- Slick Carousel -->
+					<div class="slick-carousel">
+					  <div><img src="assets/img/1.jpg" class="img-fluid" alt="Image 1"></div>
+					  <div><img src="assets/img/2.jpg" class="img-fluid" alt="Image 2"></div>
+					  <div><img src="assets/img/3.jpg" class="img-fluid" alt="Image 3"></div>
+					  <div><img src="assets/img/4.jpg" class="img-fluid" alt="Image 4"></div>
+					  <div><img src="assets/img/5.jpg" class="img-fluid" alt="Image 4"></div>
+					  <div><img src="assets/img/6.jpg" class="img-fluid" alt="Image 4"></div>
+					</div>
+				  </div>
 				<div class="about__data">
 					<p class="about__description">My name is Luca Claus, and I come from a mountain village in Trentino. I am an ambitious young man, always looking to challenge myself and push my limits.
 						I strive to give my best in everything I do, always trying to find the right solutions and adapt to every situation. </p>
@@ -550,6 +551,22 @@
 
 	<!--==================== MAIN JS ====================-->
 	<script src="assets/js/main.js"></script>
+	
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $('.slick-carousel').slick({
+		infinite: true,      // Per ripetere la galleria
+		slidesToShow: 1,     // Mostra una sola immagine alla volta
+		slidesToScroll: 1,   // Scorri una immagine alla volta
+		arrows: true,        // Mostra le frecce di navigazione
+		prevArrow: '<button type="button" class="slick-prev">←</button>',  // Freccia precedente
+		nextArrow: '<button type="button" class="slick-next">→</button>',  // Freccia successiva
+		autoplay: true,      // Avvia la galleria automaticamente
+		autoplaySpeed: 2000, // Imposta la velocità di autoplay
+	  });
+	});
+  </script>
 </body>
+
 
 </html>
